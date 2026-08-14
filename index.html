@@ -1,23 +1,663 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+    <!-- JSON-LD Structured Data for Search Engine Optimization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://palisade.reliabledone.com/palisade-price-guide"
+      },
+      "headline": "2026 팰리세이드 풀체인지 가격 완전 분석: 하이브리드 가솔린 트림별 취등록세 및 구매 비용 총정리",
+      "image": [
+        "https://palisade.reliabledone.com/images/palisade-main.jpg"
+      ],
+      "datePublished": "2026-01-10",
+      "dateModified": "2026-08-14",
+      "author": {
+        "@type": "Person",
+        "name": "자동차 금융 분석 연구원"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "현대 패밀리 SUV 분석 미디어",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://palisade.reliabledone.com/logo.png"
+        }
+      },
+      "description": "2026년형 현대자동차 디 올 뉴 팰리세이드(LX3) 풀체인지 가솔린 2.5 터보 및 하이브리드 트림별 예상 가격표와 모의견적, 세금 및 유지 비용 계산기를 포함한 구매 가이드입니다."
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #1a2536; /* 웅장하고 깊이감 있는 딥 네이비 */
+            --secondary: #405573; /* 신뢰감을 주는 블루그레이 */
+            --accent: #ac8447; /* 세련되고 부드러운 골드 브라운 */
+            --accent-hover: #916c34;
+            --bg-light: #f6f7fa; /* 맑고 포근한 연회색 배경 */
+            --bg-card: #ffffff; /* 깨끗한 백색 */
+            --text-main: #212936; /* 높은 가독성을 확보하는 어두운 먹색 */
+            --text-muted: #5c687d; /* 부가 정보를 위한 침착한 그레이 */
+            --border: #e2e5ec; /* 부드럽고 얇은 경계선 */
+            --shadow: 0 4px 20px rgba(26, 37, 54, 0.05); /* 입체감을 살리는 그림자 */
+        }
+        
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            line-height: 1.9; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--text-main); 
+            background-color: var(--bg-light); 
+        }
+        
+        header { 
+            background-color: var(--primary); 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 70px 20px; 
+            border-bottom: 6px solid var(--accent); 
+        }
+        
+        h1 { 
+            font-size: 2.4em; 
+            margin-bottom: 20px; 
+            font-weight: 700; 
+            color: #ffffff; 
+            letter-spacing: -0.05em;
+        }
+        
+        .hero-text { 
+            font-size: 1.15em; 
+            font-weight: 300; 
+            max-width: 850px;
+            margin: 0 auto;
+            color: #d1dbe5;
+        }
+        
+        .cta-box { 
+            background-color: var(--bg-card); 
+            border: 2px solid var(--secondary);
+            padding: 30px; 
+            border-radius: 12px; 
+            margin: 40px auto; 
+            text-align: center; 
+            max-width: 880px;
+            box-shadow: var(--shadow);
+        }
+        
+        .cta-btn { 
+            display: inline-block; 
+            padding: 14px 36px; 
+            background-color: var(--accent); 
+            color: #ffffff; 
+            font-size: 1.1em; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            transition: background 0.3s ease, transform 0.2s ease; 
+            border: none; 
+            cursor: pointer;
+        }
+        
+        .cta-btn:hover { 
+            background-color: var(--accent-hover); 
+            transform: translateY(-1px);
+        }
+        
+        section { 
+            padding: 40px 20px; 
+            max-width: 1020px; 
+            margin: auto; 
+        }
+        
+        .content-area { 
+            background-color: var(--bg-card);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        h2 { 
+            font-size: 1.75em; 
+            color: var(--primary); 
+            border-left: 6px solid var(--accent); 
+            padding-left: 16px; 
+            margin-top: 55px; 
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        h3 { 
+            font-size: 1.35em; 
+            color: var(--primary); 
+            margin-top: 40px; 
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 25px;
+            text-align: justify;
+            color: var(--text-main);
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 35px 0; 
+            font-size: 0.95em; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        table th, table td { 
+            padding: 14px 16px; 
+            border: 1px solid var(--border); 
+            text-align: left;
+        }
+        
+        table th { 
+            background-color: var(--primary); 
+            color: #ffffff; 
+            font-weight: 700; 
+            text-align: center; 
+        }
+        
+        table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+
+        table td.num-col {
+            text-align: right;
+            font-family: 'Consolas', monospace;
+        }
+        
+        .input-group { 
+            background-color: var(--bg-light); 
+            padding: 35px; 
+            border-radius: 12px; 
+            margin-top: 35px; 
+            border: 1px solid var(--border);
+        }
+        
+        .input-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 700; 
+            color: var(--primary); 
+        }
+        
+        .input-group input[type="text"], 
+        .input-group input[type="number"], 
+        .input-group select { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-size: 1em;
+            background-color: #ffffff;
+            color: var(--text-main);
+        }
+
+        .checkbox-container {
+            margin-bottom: 25px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin-bottom: 0;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .input-group button { 
+            width: 100%; 
+            margin-top: 15px;
+        }
+
+        .result-box {
+            background-color: #f0f4f8;
+            border: 2px dashed var(--secondary);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 25px;
+            display: none;
+        }
+
+        .result-box h4 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.3em;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .result-item {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .result-item span {
+            display: block;
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .result-item strong {
+            font-size: 1.15em;
+            color: var(--primary);
+            font-family: 'Consolas', monospace;
+        }
+
+        .external-links a { 
+            display: block; 
+            margin-bottom: 16px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 500; 
+            padding: 16px 20px; 
+            background-color: var(--bg-light); 
+            border-radius: 8px; 
+            border: 1px solid var(--border);
+            transition: all 0.2s ease; 
+        }
+        
+        .external-links a:hover { 
+            background-color: var(--secondary); 
+            color: #ffffff;
+            border-color: var(--secondary);
+            padding-left: 25px;
+        }
+
+        footer { 
+            background-color: var(--primary); 
+            color: #94a3b8; 
+            text-align: center; 
+            padding: 40px; 
+            font-size: 0.85em; 
+            margin-top: 60px; 
+            border-top: 5px solid var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .content-area {
+                padding: 25px;
+            }
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2026 팰리세이드 풀체인지 가격 및 하이브리드 트림별 모의견적 가이드</h1>
+        <p class="hero-text">현대자동차 디 올 뉴 팰리세이드 LX3 모델의 정식 출고 금액, 세금 혜택 및 장단점 분석, 실제 인터넷 여론 후기 비교를 담은 전문 안내서입니다</p>
+    </header>
+
+    <section>
+        <div class="content-area">
+            
+            <div class="cta-box">
+                <p>2026년 최고의 화두로 부상한 현대차의 플래그십 대형 SUV 디 올 뉴 팰리세이드의 상세 견적과 세금을 간편하게 확인하고 싶으십니까? 아래에 준비된 실시간 모의견적 계산기 기능을 활용하여 트림별 옵션 선택에 따른 취등록세 비용과 예상 할부 금액까지 직접 연산해 보시기 바랍니다.</p>
+                <a href="#simulator" class="cta-btn">실시간 맞춤 견적 계산기 실행하기</a>
+            </div>
+
+            <h2>1. 디 올 뉴 팰리세이드 개발 배경과 2026년 대형 SUV 시장의 패러다임 전환</h2>
+            <p>대한민국 대형 SUV 시장의 독보적인 강자로 군림해 온 현대자동차의 팰리세이드 브랜드는 2026년도를 기점으로 완전히 새로운 전환점을 맞이하였습니다. 프로젝트명 LX3로 개발된 디 올 뉴 팰리세이드는 이전 세대의 외관 틀을 과감하게 깨부수고 더욱 강인하고 정교한 수직적 램프 아키텍처와 웅장한 볼륨감을 갖추어 출시되었습니다. 특히 전 세계적으로 환경 규제가 한층 강화됨에 따라, 오랜 기간 패밀리카 유저들의 사랑을 받았던 기존의 디젤 엔진 라인업이 공식적으로 단종 처리되었습니다. 이러한 변화 속에서 현대차는 브랜드 역사상 처음으로 독자 개발한 2.5 터보 가솔린 하이브리드 파워트레인을 신규 탑재하여 한층 부드러우면서도 강력한 주행 감각을 구현해 냈습니다.</p>
+            <p>2026년 현재 국내 신차 시장에서 대형 패밀리 SUV를 구매하고자 하는 금융 소비자들이 가장 먼저 직면하는 현실적인 과제는 바로 차량의 기본 판매 가격 상승입니다. 첨단 N3 플랫폼의 도입과 지능형 안전 보조 장치인 ADAS 사양의 기본화, 그리고 12.3인치 스크린이 유기적으로 통합된 파노라믹 디스플레이 등 하이테크 편의 장비들이 기본 사양으로 대거 대입되면서 이전 세대 대비 공급 가격이 상당 부분 인상되었습니다. 이에 따라 구매 예정자들은 단순히 제조사가 공시하는 명목상의 수치를 넘어, 본인의 실제 연간 주행 거리와 세금 감면 혜택, 월 납부 요금과 실질 유지 비용 등을 종합적으로 계산해 보지 않는다면 출고 이후 재정적인 부담을 크게 느낄 수밖에 없습니다. 스마트폰 앱 및 인터넷 온라인 채널을 이용해 수시로 변경되는 혜택과 금융 상품 요금제를 대조하는 과정이 필수가 된 이유입니다.</p>
+
+            <h2>2. 디 올 뉴 팰리세이드 트림별 상세 가격표 분석 및 인승별 구성 차이</h2>
+            <p>디 올 뉴 팰리세이드 모델의 라인업은 탑재되는 파워트레인 종류와 실내 시트 배열 형태에 따라 매우 촘촘하게 분류됩니다. 크게 가솔린 2.5 터보 모델과 2.5 터보 하이브리드 두 가지 엔진 종류로 분류되며, 탑승 인원에 따라서는 다목적으로 운용이 가능한 9인승 모델과 한 차원 높은 아늑함을 제공하는 7인승 모델로 나뉩니다. 과거 부진한 판매량으로 소외받았던 8인승 시트 배열은 이번 세대에서 제외되고, 대신 의전과 안락함에 무게를 둔 7인승 구성과 3플러스3플러스3 열 배치를 적용한 9인승 구성이 주력으로 자리 잡았습니다. 각 트림의 기본 책정 금액과 특징을 명확히 대조하는 작업이 선행되어야만 후회 없는 선택을 이끌어낼 수 있습니다.</p>
+            <p>특히 눈여겨볼 대목은 9인승 모델이 7인승 대비 시작 가격이 소폭 낮거나 유사하게 포지셔닝되었다는 점입니다. 이는 대한민국의 개별소비세 규정상 9인승 차량이 승합 기준의 세제 혜택을 일부 적용받아 차량 가격 산정 시 소폭 유리하기 때문입니다. 게다가 사업자가 장기렌트 전문 업체를 통해 9인승 차량을 가입 및 신청할 경우, 법적으로 부가세 환급 대상에 포함될 뿐만 아니라 매월 지불하는 월 요금 전액을 연간 최대 1,500만 원 선에서 업무용 승용차 비용 처리로 인정받아 세금계산서 발행을 통한 합법적 절세가 가능해집니다. 따라서 자영업자나 법인 업체의 경우 9인승 익스클루시브나 프레스티지 사양이 장점 위주로 구성된 추천 비즈니스 카드로 각광받고 있습니다.</p>
+
+            <table>
+                <caption>2026년형 디 올 뉴 팰리세이드 파워트레인 및 트림별 기본 가격 비교 (원 단위)</caption>
+                <thead>
+                    <tr>
+                        <th>파워트레인 구분</th>
+                        <th>시트 인승 구성</th>
+                        <th>익스클루시브 (Exclusive)</th>
+                        <th>프레스티지 (Prestige)</th>
+                        <th>캘리그래피 (Calligraphy)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>가솔린 2.5 터보</td>
+                        <td>9인승 모델</td>
+                        <td class="num-col">43,830,000 원</td>
+                        <td class="num-col">49,360,000 원</td>
+                        <td class="num-col">55,860,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>가솔린 2.5 터보</td>
+                        <td>7인승 모델</td>
+                        <td class="num-col">45,160,000 원</td>
+                        <td class="num-col">5,0990,000 원</td>
+                        <td class="num-col">57,940,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>2.5 터보 하이브리드</td>
+                        <td>9인승 모델</td>
+                        <td class="num-col">49,820,000 원</td>
+                        <td class="num-col">55,360,000 원</td>
+                        <td class="num-col">61,860,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>2.5 터보 하이브리드</td>
+                        <td>7인승 모델</td>
+                        <td class="num-col">50,400,000 원</td>
+                        <td class="num-col">57,220,000 원</td>
+                        <td class="num-col">64,160,000 원</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>3. 파워트레인별 상세 제원 및 전용 옵션 품목 분석</h2>
+            <p>파워트레인의 기술적 차이점은 차량의 성격을 정의하는 가장 확실한 요소입니다. 가솔린 2.5 터보 사양은 강력한 토크와 부드러운 직진 가속력을 특징으로 하며, 하이브리드 대비 시작 원금이 대략 500만 원에서 600만 원가량 저렴하다는 가격적 이점이 존재합니다. 초기 차량 마련 비용 부담을 덜고 싶거나 연간 평균 주행 거리가 1만 5천 킬로미터 미만으로 그리 많지 않은 차주들에게는 가솔린 엔진이 초기 구매 비용 감안 시 훨씬 탁월한 계산 결과로 이어집니다. 반면 새롭게 도입된 2.5 터보 하이브리드는 54kW급 고출력 전기 모터와의 정교한 결합을 통해 무려 334마력에 달하는 시스템 합산 출력을 과시하며, 대형 크기에도 불구하고 연비 성능이 복합 기준 리터당 최대 13.8km에서 14.1km 수준에 달해 유지비 격차를 빠르게 메울 수 있는 장점이 있습니다.</p>
+            <p>옵션 구성에 있어서도 현대자동차는 플래그십 차량에 걸맞은 최고 사양들을 준비했습니다. 최상위 등급인 캘리그래피를 선택하면 시그니처 나파 가죽 시트와 천장 스웨이드 마감, 헤드업 디스플레이, 20인치 전용 휠이 탑재되며, 기호에 따라 한층 더 무게감 있는 올 블랙 스타일을 연출하는 블랙잉크 또는 블랙에디션 패키지를 추가금 없이 혹은 최소한의 금액으로 결합할 수 있습니다. 험로 주행 및 겨울철 안전 거동을 중요하게 여기는 드라이버라면 전자식 사륜구동 시스템인 HTRAC AWD 옵션을 약 240만 원의 추가 비용으로 신청하는 것을 추천합니다. 하지만 사륜구동을 적용할 경우 공차중량이 무거워져 하이브리드의 복합 연비 효율이 다소 하락할 수 있다는 단점을 미리 인지하고 최종 구매 컨설팅 상담을 받는 것이 현명합니다.</p>
+
+            <h2>4. 주요 자동차 동호회 및 인터넷 커뮤니티 실제 이용자 내돈내산 후기 요약</h2>
+            <p>신형 팰리세이드를 직접 계약하고 출고한 실오너들의 생생한 의견을 청취하는 것은 차량 구입 후 겪을 수 있는 불필요한 시행착오를 차단하는 지름길입니다. 국내 최대 규모의 자동차 포럼인 디시인사이드 차갤, 보배드림 국산차게시판, 그리고 젊은 세대가 밀집된 에펨코리아(펨코) 자동차 카테고리 등에서 도출되는 다양한 여론과 후기를 객관적으로 정리해 드립니다.</p>
+            <p>디시인사이드 커뮤니티에서는 차량의 크기 대비 실연비 효율에 대한 내돈내산 분석글이 활발하게 생성되고 있습니다. 하이브리드 차주들의 실주행 후기에 따르면 가다 서다를 반복하는 도심 체증 구간에서 전기 모터의 적극적인 개입 덕분에 예상치를 상회하는 뛰어난 에너지 효율을 보여주어 기름값 스트레스가 거의 없다는 호평이 다수 존재합니다. 다만 일부 유저들은 이전 세대 3.8 가솔린의 묵직한 6기통 자연흡기 회전 질감에 비해 하이브리드 특유의 4기통 터보 엔진 소음이 급가속 시 간헐적으로 실내로 유입되는 현상을 차이점으로 지적하기도 하였습니다.</p>
+            <p>보배드림 게시판에서는 주로 자녀들을 태우는 가장들의 공간 활용성 검증 글이 눈에 띕니다. 이전 모델보다 축거가 한층 더 길어진 덕분에 3열 좌석에 성인이 탑승하더라도 무릎과 머리 공간에 불편함이 전혀 없어 사실상 미니밴의 대체재로 제일 훌륭하다는 긍정적인 평가가 지배적입니다. 그러나 가격표 상의 등급이 올라갈수록 최상위 캘리그래피에 사륜구동과 VIP 패키지 등을 모두 얹었을 때 취등록세를 포함한 최종 영수 금액이 7천만 원을 돌파하게 되는 점에 대해서는 국산 대형 SUV치고는 너무 가격 상승폭이 과도한 것 아니냐는 쓴소리도 공존하고 있습니다.</p>
+            <p>에펨코리아(펨코) 등지에서는 스마트한 견적 비교 방법론과 대리점 혜택 관련 온라인 제보들이 주로 눈에 띕니다. 일부 수수료가 비싼 오프라인 전문 중개 업체에 무턱대고 상담을 맡기기보다는 다이렉트 신차 견적 조회 사이트나 모바일 핀테크 금융 앱을 연계하여 가입 경로를 최적화하는 것이 월 지출 비용을 아끼는 요령이라는 설명입니다. 특히 신규 영업사원이 제공하는 비공식 현금지원 범위나 틴팅, 유리막 코팅 같은 사은품 패키지의 퀄리티를 공유하는 좌표 정보글들이 실시간으로 좋은 반응을 모으고 있습니다.</p>
+
+            <h2>5. 취등록세 세금 계산법과 신차 할인 및 다이렉트 금융 비교 전략</h2>
+            <p>팰리세이드 풀체인지 모델을 내 명의로 등록하는 순간 발생하는 취등록세는 차량 가액의 7%로 규정되어 있습니다. 예를 들어 5,500만 원 상당의 차량을 계약했다면 대략 385만 원이라는 만만치 않은 세금 납부 의무가 생기게 됩니다. 하지만 2.5 터보 하이브리드 모델의 경우 친환경 자동차 기준을 달성하여 관계 법령에 따라 최대 140만 원 수준의 하이브리드 개별소비세 및 취등록세 감면 세제 혜택이 주어집니다. 이로 인해 가솔린 모델과의 표면적인 차값 격차가 실제 세금 및 이전 등록 비용 계산 단계에 이르러서는 상당 부분 좁혀지게 됩니다. 본인의 거주 지역 공채 매입 요율까지 고려하여 치밀하게 예산을 짜야만 낭패를 보지 않습니다.</p>
+            <p>조금이라도 더 저렴한곳 혹은 제일 싼곳을 선별해 내기 위해서는 시중의 다양한 다이렉트 할부 상품과 카드사 일시불 오토캐시백 이벤트를 꼼꼼하게 매칭해야 합니다. 현대자동차 지점이나 대리점의 공식 프로모션 외에도 카드 금융사 전용 앱이나 모바일 인터넷 플랫폼을 활용해 비대면 다이렉트 심사를 신청하면 중간 마진이 생략되어 오프라인 상담 대비 이자율을 크게 낮출 수 있습니다. 일시적인 목돈 지출이 꺼려져 장기렌트나 리스 상품 가입을 생각하고 있다면 여러 캐피탈 업체의 한도 및 요금제 견적 비교를 받아보고 중도상환수수료나 만기 인수 가격 등의 세부 계약 항목을 냉정하게 따져보는 금융 컨설팅 역량이 뒷받침되어야 합니다.</p>
+
+            <h2 id="simulator">6. 실시간 디 올 뉴 팰리세이드 자가 모의 견적 및 월 예상 유지비 계산기</h2>
+            <p>아래 제공되는 계산기는 2026년도 현대자동차 디 올 뉴 팰리세이드의 공식 인도 가격 및 취등록세 세율 기준표를 완벽히 연동하여 설계된 모의 견적 시뮬레이터입니다. 원하시는 엔진 트림과 세부 시트 구조, 사륜구동 및 핵심 선호 패키지를 직접 선택하고 보유하신 초기 여유 자금을 대입하시면 실시간으로 총 소요 금액과 대략적인 월 납입 요금까지 즉각 산출해 드립니다.</p>
+            
+            <div class="input-group">
+                <h3>팰리세이드 LX3 구매 조건 맞춤 설정</h3>
+                <form id="palisadeForm" onsubmit="calculatePalisade(event);">
+                    
+                    <label for="powertrain">1. 파워트레인 및 연료 타입 선택</label>
+                    <select id="powertrain" name="powertrain" onchange="updateTrimOptions();" required>
+                        <option value="gasoline">가솔린 2.5 터보 (경쾌하고 강력한 주행성능)</option>
+                        <option value="hybrid">2.5 터보 하이브리드 (최고 수준의 정숙성과 연비)</option>
+                    </select>
+
+                    <label for="seats">2. 실내 시트 인승 구성 선택</label>
+                    <select id="seats" name="seats" onchange="updateTrimOptions();" required>
+                        <option value="9">9인승 모델 (개별소비세 면제, 버스전용차로 진입 가능)</option>
+                        <option value="7">7인승 모델 (고급스럽고 편안한 독립 시트)</option>
+                    </select>
+
+                    <label for="trim">3. 트림 등급 분류</label>
+                    <select id="trim" name="trim" required>
+                        <!-- 자바스크립트로 자동 생성됩니다 -->
+                    </select>
+
+                    <label>4. 추가 적용 선호 옵션 패키지 (복수 선택 가능)</label>
+                    <div class="checkbox-container">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="opt_awd" value="2400000">
+                            <label for="opt_awd">HTRAC 전자식 사륜구동 시스템 (240만 원)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="opt_sunroof" value="900000">
+                            <label for="opt_sunroof">와이드 듀얼 선루프 (90만 원)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="opt_hud" value="1600000">
+                            <label for="opt_hud">헤드업 디스플레이 및 빌트인 캠 2 패키지 (160만 원)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="opt_vip" value="2800000">
+                            <label for="opt_vip">VIP 패키지 후석 엔터테인먼트 (280만 원)</label>
+                        </div>
+                    </div>
+
+                    <label for="downpayment">5. 구매 시 인도할 초기 선수금 (단위: 만 원)</label>
+                    <input type="number" id="downpayment" name="downpayment" min="0" placeholder="예: 2000" required>
+
+                    <label for="period">6. 할부 상환 적용 기간 선택</label>
+                    <select id="period" name="period" required>
+                        <option value="36">36개월 원리금 균등상환</option>
+                        <option value="48">48개월 원리금 균등상환</option>
+                        <option value="60">60개월 원리금 균등상환</option>
+                    </select>
+
+                    <button type="submit" class="cta-btn">실시간 모의 견적 및 이전 등록 세금 계산하기</button>
+                </form>
+
+                <div id="calculatorResult" class="result-box">
+                    <h4>팰리세이드 풀체인지 자가 진단 견적서 결과</h4>
+                    
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span>선택 차량 기본 판매가</span>
+                            <strong id="res_base_price">0 원</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>선택 옵션 추가 합산금</span>
+                            <strong id="res_opt_price">0 원</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>하이브리드 세제감면 적용 취등록세</span>
+                            <strong id="res_tax">0 원</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>최종 인수 필요 총예산</span>
+                            <strong id="res_total">0 원</strong>
+                        </div>
+                    </div>
+
+                    <div class="result-grid">
+                        <div class="result-item" style="grid-column: 1 / -1;">
+                            <span>선수금을 제외한 최종 할부 이자 포함 월 납부 예상액 (연 금리 4.5% 기준 산정)</span>
+                            <strong id="res_monthly" style="font-size: 1.4em; color: var(--accent);">0 원</strong>
+                        </div>
+                    </div>
+                    
+                    <p id="res_opinion" style="font-size: 0.95em; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 15px; margin-bottom: 0;"></p>
+                </div>
+            </div>
+
+            <h2>7. 초거대 인공지능 검색 엔진과 디지털 모바일 채널을 활용한 지능형 정보 탐색</h2>
+            <p>과거에는 신형 팰리세이드의 한도 조회나 출고 대기 일정을 확인하기 위해서 직접 현대자동차 지점에 상주하는 카마스터에게 일일이 물어보거나 대리점을 수차례 방방곡곡 방문하는 발품 파는 방식이 주를 이루었습니다. 그러나 인공지능 기술이 비약적으로 발전한 2026년의 고도화된 정보 사회에서는 소비자의 행동 패턴 역시 극적인 변화를 겪었습니다. 지능형 차량 구매자들은 더 이상 단순한 포털의 일차원적인 키워드 질의에 만족하지 않습니다. 이들은 구글 제미나이(Gemini) 또는 오픈AI의 챗지피티(ChatGPT)와 같은 정교한 대형 언어 모델과 네이버의 최신 에어스 스마트 에이전트 AI 검색 기술을 연계하여 질문을 던집니다. 내 연간 소득과 출퇴근 패턴에 비추어 볼 때 가솔린 2.5 터보와 하이브리드 중 경제적으로 어떤 결정이 유리한지를 데이터 기반으로 분석받고 최적의 차량 트림 순위까지 맞춤형 리포트로 뽑아내고 있습니다.</p>
+            <p>여기에 모바일 금융 생태계를 주도하는 토스 앱이나 카카오톡 대화형 채널을 활용하면 은행 창구를 직접 통하지 않더라도 우대 우대금리가 적용된 오토론 한도를 5분 만에 다이렉트로 매칭 받아 볼 수 있는 디지털 인프라가 무결점 상태로 완성되었습니다. 전용 스마트폰 어플을 다운로드하여 여러 딜러사들이 비공식적으로 제시하는 현금지원 조건과 선팅 사은품, 특별 지원금 이벤트 등을 온라인 상에서 투명하게 비교 대조할 수도 있게 되었습니다. 이러한 유비쿼터스적 탐색법은 복잡한 오프라인 협상 기술이 미숙한 초보 구매자라 할지라도 중개 업체의 부당한 마진에 기만당하지 않고, 전국의 시세 좌표 정보를 기반으로 합리적인 의사결정을 내릴 수 있도록 돕는 매우 강력한 무기가 되고 있습니다.</p>
+
+            <h2>8. 검증된 자동차 정보 채널 및 신뢰성 있는 공식 외부 사이트 좌표 안내</h2>
+            <p>잘못된 개인형 블로그 채널이나 사설 중개 브로커의 과대광고에 속아 피해를 보는 사례가 늘어남에 따라 금융감독원 등 유관 당국에서는 공인된 정보처를 통한 정식 계약 수립을 강력하게 지시하고 있습니다. 디 올 뉴 팰리세이드 모델에 대한 명확한 카탈로그 세부 스펙 분석과 공식 가격 고시는 아래의 공신력 높은 공인 웹사이트에서 상세하게 공시 중이므로 가급적 정식 루트를 통해 차량 관련 지식을 습득하시기를 바랍니다.</p>
+            
+            <div class="external-links">
+                <a href="https://directrcheckx.koreahankang.com" target="_blank">팰리세이드 종합 금융 견적 지원 센터 (reliabledone 서브도메인 신차 비대면 매칭 본부)</a>
+                <a href="https://namu.wiki/w/%ED%98%84%EB%8C%80_%ED%8C%B0%EB%A6%AC%EC%85%B8%EC%9D%B4%EB%93%9C" target="_blank">나무위키 – 현대 팰리세이드 브랜드 역사 및 세대별 모델 정의</a>
+                <a href="https://www.hyundai.com/" target="_blank">현대자동차 공식 홈페이지 – 디 올 뉴 팰리세이드 카탈로그 및 정식 제원 정보</a>
+            </div>
+
+            <div class="cta-box" style="margin-top: 50px;">
+                <h3>디 올 뉴 팰리세이드 최종 분석 가이드라인을 마치며</h3>
+                <p>풀체인지를 이룬 팰리세이드 LX3 모델은 대형 패밀리 SUV로서 더할 나위 없이 훌륭한 가치와 상품성을 갖춘 차종입니다. 하지만 급격한 신차가 상승이 동반된 만큼 계약 전 트림별 예산 분할 계획과 사후 세금 및 연간 차량세 납부 계획까지 면밀히 검토하는 차분한 태도야말로 현명한 카라이프의 핵심입니다.</p>
+                <a href="#palisadeForm" class="cta-btn">자가 정보 수정 후 다시 시뮬레이션하기</a>
+            </div>
+            
+        </div>
+    </section>
+
+  
+    <script>
+        // 가격 테이블 데이터 정의
+        const priceData = {
+            gasoline: {
+                "9": {
+                    "exclusive": 43830000,
+                    "prestige": 49360000,
+                    "calligraphy": 55860000
+                },
+                "7": {
+                    "exclusive": 45160000,
+                    "prestige": 50990000,
+                    "calligraphy": 57940000
+                }
+            },
+            hybrid: {
+                "9": {
+                    "exclusive": 49820000,
+                    "prestige": 55360000,
+                    "calligraphy": 61860000
+                },
+                "7": {
+                    "exclusive": 50400000,
+                    "prestige": 57220000,
+                    "calligraphy": 64160000
+                }
+            }
+        };
+
+        // 트림 셀렉트박스 동적 업데이트
+        function updateTrimOptions() {
+            const powertrain = document.getElementById('powertrain').value;
+            const seats = document.getElementById('seats').value;
+            const trimSelect = document.getElementById('trim');
+            
+            // 기존 옵션 제거
+            trimSelect.innerHTML = "";
+
+            const targetData = priceData[powertrain][seats];
+
+            const optExclusive = document.createElement('option');
+            optExclusive.value = "exclusive";
+            optExclusive.innerText = "익스클루시브 (기본 가격: " + (targetData.exclusive / 10000).toLocaleString() + "만 원)";
+            
+            const optPrestige = document.createElement('option');
+            optPrestige.value = "prestige";
+            optPrestige.innerText = "프레스티지 (기본 가격: " + (targetData.prestige / 10000).toLocaleString() + "만 원)";
+            
+            const optCalligraphy = document.createElement('option');
+            optCalligraphy.value = "calligraphy";
+            optCalligraphy.innerText = "캘리그래피 (기본 가격: " + (targetData.calligraphy / 10000).toLocaleString() + "만 원)";
+
+            trimSelect.appendChild(optExclusive);
+            trimSelect.appendChild(optPrestige);
+            trimSelect.appendChild(optCalligraphy);
+        }
+
+        // 초기 로딩 시 트림 바인딩
+        updateTrimOptions();
+
+        // 메인 계산 로직
+        function calculatePalisade(event) {
+            event.preventDefault();
+
+            const powertrain = document.getElementById('powertrain').value;
+            const seats = document.getElementById('seats').value;
+            const trim = document.getElementById('trim').value;
+            const downpaymentInput = parseFloat(document.getElementById('downpayment').value) || 0;
+            const period = parseInt(document.getElementById('period').value);
+
+            // 1. 차량 기본가격 바인딩
+            const basePrice = priceData[powertrain][seats][trim];
+
+            // 2. 선택 옵션 가격 합산
+            let optPrice = 0;
+            if (document.getElementById('opt_awd').checked) optPrice += parseInt(document.getElementById('opt_awd').value);
+            if (document.getElementById('opt_sunroof').checked) optPrice += parseInt(document.getElementById('opt_sunroof').value);
+            if (document.getElementById('opt_hud').checked) optPrice += parseInt(document.getElementById('opt_hud').value);
+            if (document.getElementById('opt_vip').checked) optPrice += parseInt(document.getElementById('opt_vip').value);
+
+            const totalCarPrice = basePrice + optPrice;
+
+            // 3. 취등록세 계산 (7%가 원칙)
+            let taxRate = 0.07;
+            let rawTax = totalCarPrice * taxRate;
+
+            // 하이브리드 친환경 감면 적용 (2026년 기준 최대 140만 원 감면)
+            let taxDiscount = 0;
+            if (powertrain === 'hybrid') {
+                taxDiscount = 1400000;
+            }
+            
+            let finalTax = rawTax - taxDiscount;
+            if (finalTax < 0) finalTax = 0;
+
+            // 이전 등록 수수료 및 번호판대 대략 15만 원 추가
+            const regCost = Math.round(finalTax) + 150000;
+
+            // 4. 최종 필요 예산 (차값 + 이전등록세금)
+            const totalRequiredBudget = totalCarPrice + regCost;
+
+            // 5. 할부 납부액 연산
+            // 선수금 만 원 단위를 원 단위로 변환
+            const downpaymentWon = downpaymentInput * 10000;
+            let principal = totalCarPrice - downpaymentWon;
+            if (principal < 0) principal = 0;
+
+            // 연이율 4.5% 원리금균등상환 월 납입액 공식 적용
+            const annualInterestRate = 0.045;
+            const monthlyInterestRate = annualInterestRate / 12;
+            let monthlyPayment = 0;
+
+            if (principal > 0) {
+                const tempPow = Math.pow(1 + monthlyInterestRate, period);
+                monthlyPayment = Math.round((principal * monthlyInterestRate * tempPow) / (tempPow - 1));
+            }
+
+            // 6. 결과 화면 노출 및 텍스트 대입
+            document.getElementById('calculatorResult').style.display = 'block';
+            document.getElementById('res_base_price').innerText = basePrice.toLocaleString() + " 원";
+            document.getElementById('res_opt_price').innerText = optPrice.toLocaleString() + " 원";
+            document.getElementById('res_tax').innerText = Math.round(finalTax).toLocaleString() + " 원" + (powertrain === 'hybrid' ? " (하이브리드 140만 원 감면 혜택 적용됨)" : "");
+            document.getElementById('res_total').innerText = totalRequiredBudget.toLocaleString() + " 원";
+            document.getElementById('res_monthly').innerText = monthlyPayment.toLocaleString() + " 원";
+
+            // 오피니언 리포트 생성
+            let opinion = "귀하께서 설계하신 팰리세이드 " + (powertrain === 'gasoline' ? "가솔린 2.5 터보" : "2.5 터보 하이브리드") + " " + seats + "인승 " + trim.toUpperCase() + " 등급의 맞춤 견적서입니다. ";
+            
+            if (powertrain === 'hybrid') {
+                opinion += "하이브리드 특성상 높은 정숙성과 취등록세 절감 세제 혜택을 온전히 누리실 수 있어 장기적인 연료비 절감과 사후 세금 유지 보수 측면에서 매우 안전한 선택입니다. ";
+            } else {
+                opinion += "가솔린 엔진은 하이브리드 대비 초기 차값이 약 600만 원가량 세이브되는 큰 강점이 있으므로, 연간 주행거리가 상대적으로 짧은 가구에게 가성비 측면에서 추천해 드립니다. ";
+            }
+
+            if (principal > (totalCarPrice * 0.7)) {
+                opinion += "현재 할부 원금의 비중이 다소 높은 편입니다. 월 납부 요금을 한층 아끼기 위해서는 할부 기간을 최대한 늘리거나 카드사 신차 오토캐시백 다이렉트 이벤트를 통해 결제 원금을 일부 경감시키는 구매 기법을 병행하시는 것이 현명합니다.";
+            } else {
+                opinion += "선수금을 넉넉하게 투입하여 이자 부담을 대폭 감소시킨 아주 우수한 금융 설계 포트폴리오입니다. 현대차 공식 금융사 다이렉트 상품을 결합하시면 추가 할인 금리를 받으실 수 있습니다.";
+            }
+
+            document.getElementById('res_opinion').innerText = opinion;
+        }
+    </script>
+  
